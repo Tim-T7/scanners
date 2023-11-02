@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class scanners here.
  *
@@ -7,14 +6,20 @@
  */
 import java.util.Scanner;
 
-public class MyScanner
+public class IntScanner
 {
-
     public void run() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
+            String str = "";
+            if (scanner.hasNextInt()) {
+                int a = scanner.nextInt();
+                int b = 3 * a;
+                System.out.println(b);
+            }
+            scanner.useDelimiter(",|\n");
             if (scanner.hasNext()) {
-                String str = scanner.next();
+                str = scanner.next();
                 System.out.println(str);
             }
         }
